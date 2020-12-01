@@ -6,15 +6,3 @@ export const Container = styled.div`
   flex-direction: column;
   margin: 8px;
 `;
-
-export const Item = styled.div`
-  display: flex;
-
-  span + span {
-    margin: 0 8px;
-  }
-
-  button {
-    width: 56px;
-  }
-`;
