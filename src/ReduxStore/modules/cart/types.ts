@@ -1,10 +1,10 @@
-interface IProduct {
+export interface IProduct {
   id: number;
   title: string;
   price: number;
 }
 
-interface ICartItem {
+export interface ICartItem {
   product: IProduct;
   quantity: number;
 }

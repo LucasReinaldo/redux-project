@@ -1,4 +1,5 @@
 import React from 'react';
+import Cart from '../../components/Cart';
 
 import Catalog from '../../components/Catalog';
 
@@ -7,8 +8,8 @@ import { Container } from './styles';
 const Home: React.FC = () => {
   return (
     <Container>
-      <h1>Home</h1>
       <Catalog />
+      <Cart />
     </Container>
   );
 };

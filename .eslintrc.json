@@ -21,7 +21,10 @@
   "plugins": ["react", "react-hooks", "@typescript-eslint", "prettier"],
   "rules": {
     "camelcase": "off",
+    "no-param-reassign": "off",
+    "no-plusplus": "off",
     "no-use-before-define":"off",
+    "consistent-return": ["warn"],
     "react/jsx-props-no-spreading": "off",
     "react/jsx-one-expression-per-line": "off",
     "no-unused-expressions": "off",
