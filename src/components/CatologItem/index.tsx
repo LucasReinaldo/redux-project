@@ -1,5 +1,6 @@
 import React, { useCallback } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { IState } from '../../ReduxStore';
 import { addProductToCartRequest } from '../../ReduxStore/modules/cart/actions';
 import { IProduct } from '../../ReduxStore/modules/cart/types';
 
@@ -11,6 +12,10 @@ interface ICatalogItemProps {
 
 const CatologItem = ({ product }: ICatalogItemProps) => {
   const dispatch = useDispatch();
+
+  const outOfStock = useSelector<IState, boolean>((state) =>
+    state.cart.failedItemsById.includes(product.id),
+  );
 
   const handleAddToCart = useCallback(() => {
     dispatch(addProductToCartRequest(product));
@@ -25,6 +30,7 @@ const CatologItem = ({ product }: ICatalogItemProps) => {
           <button onClick={handleAddToCart} type="button">
             Buy
           </button>
+          {outOfStock && <span style={{ color: 'red' }}>Out of stock</span>}
         </div>
       </Item>
     </Container>
