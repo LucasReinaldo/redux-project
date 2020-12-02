@@ -8,6 +8,10 @@
 
 The project was developed using Typescript, ReactJS and Redux with Redux-Saga.
 
+Redux is used mostly for application state management. To summarize it, Redux maintains the state of an entire application in a single immutable state tree (object), which can't be changed directly. When something changes, a new object is created (using actions and reducers).
+
+Redux-Saga is a library that aims to make application side effects (i.e. asynchronous things like data fetching and impure things like accessing the browser cache) easier to manage, more efficient to execute, easy to test, and better at handling failures.
+
 [x] Typescript
 [x] ReactJS
 [x] Redux
